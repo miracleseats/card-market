@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: cardmarket
+      POSTGRES_USER: cardmarket
+      POSTGRES_PASSWORD: cardmarket
+    ports:
+      - "5432:5432"
+    volumes:
+      - cardmarket_pg:/var/lib/postgresql/data
+
+volumes:
+  cardmarket_pg:
